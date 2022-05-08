@@ -1,0 +1,73 @@
+<section class="content-header">
+  <div class="container-fluid">
+    <div class="row mb-2">
+      <div class="col-sm-6">
+      </div>
+      <div class="col-sm-6">
+        <ol class="breadcrumb float-sm-right">
+          <li class="breadcrumb-item"><a routerLink="/">Home</a></li>
+          <li class="breadcrumb-item active">Delete Book Form</li>
+        </ol>
+      </div>
+    </div>
+  </div><!-- /.container-fluid -->
+</section>
+
+<!--Reactive Form-->
+<!-- Main content -->
+<section class="content">
+  <div class="container-fluid">
+    <div class="row">
+      <!-- left column -->
+      <div class="col-md-12">
+        <!-- general form elements -->
+        <div class="card card-primary">
+          <div class="card-header">
+            <h3 class="card-title">Edit Book Form</h3>
+          </div>
+          <!-- /.card-header -->
+          <!-- form start -->
+          <form [formGroup]="bookForm">
+            <div class="card-body">
+              <div class="form-group">
+                <label for="title">Name</label>
+                <input type="text" class="form-control"
+                       id="title"
+                       formControlName="title"
+                       placeholder="Enter name"
+                       disabled>
+              </div>
+              <div class="form-group">
+                <label for="author" class="form-label">Author:</label>
+                <input type="text" class="form-control"
+                       id="author"
+                       formControlName="author"
+                       placeholder="Enter author"
+                       disabled>
+              </div>
+              <div class="form-group">
+                <label for="description" class="form-label">Description:</label>
+                <input type="text" class="form-control"
+                       id="description"
+                       formControlName="description"
+                       placeholder="Enter description"
+                       disabled>
+              </div>
+            </div>
+            <!-- /.card-body -->
+            <div class="card-footer">
+              <button routerLink="/books" class="btn btn-warning">Exit</button>
+            </div>
+
+          </form>
+        </div>
+        <!-- /.card -->
+      </div>
+      <!--/.col (left) -->
+    </div>
+    <!-- /.row -->
+  </div><!-- /.container-fluid -->
+</section>
+
+
+
